@@ -65,11 +65,11 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 
 # Editor
 sora-editor-bom = { group = "io.github.Rosemoe.sora-editor", name = "editor-bom", version.ref = "soraEditor" }
-sora-editor = { group = "io.github.Rosemoe.sora-editor", name = "editor" }
-sora-editor-textmate = { group = "io.github.Rosemoe.sora-editor", name = "language-textmate" }
-sora-editor-treesitter = { group = "io.github.Rosemoe.sora-editor", name = "language-treesitter" }
-sora-editor-lsp = { group = "io.github.Rosemoe.sora-editor", name = "editor-lsp" }
-sora-oniguruma = { group = "io.github.Rosemoe.sora-editor", name = "oniguruma-native" }
+sora-editor = { group = "io.github.Rosemoe.sora-editor", name = "editor", version.ref = "soraEditor" }
+sora-editor-textmate = { group = "io.github.Rosemoe.sora-editor", name = "language-textmate", version.ref = "soraEditor" }
+sora-editor-treesitter = { group = "io.github.Rosemoe.sora-editor", name = "language-treesitter", version.ref = "soraEditor" }
+sora-editor-lsp = { group = "io.github.Rosemoe.sora-editor", name = "editor-lsp", version.ref = "soraEditor" }
+sora-oniguruma = { group = "io.github.Rosemoe.sora-editor", name = "oniguruma-native", version.ref = "soraEditor" }
 
 # Terminal
 terminal-view = { group = "com.github.termux", name = "terminal-view", version.ref = "termux" }

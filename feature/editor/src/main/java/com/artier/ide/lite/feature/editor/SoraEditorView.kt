@@ -6,17 +6,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.AbstractComposeView
 import androidx.compose.ui.viewinterop.AndroidView
-import io.github.rosemoe.sora.langs.textmate.TextMateColorScheme
-import io.github.rosemoe.sora.langs.textmate.TextMateLanguage
 import io.github.rosemoe.sora.widget.CodeEditor
-import io.github.rosemoe.sora.widget.schemes.EditorColorScheme
 
 /**
  * Compose wrapper for Sora Editor
- * Hosts the native CodeEditor in a Compose layout
- *
- * Based on official Sora Editor Compose integration guide:
- * https://project-sora.github.io/sora-editor-docs/guide/code-editor-in-compose
  */
 @Composable
 fun SoraEditorView(
@@ -28,30 +21,10 @@ fun SoraEditorView(
     AndroidView(
         factory = { context ->
             CodeEditor(context).apply {
-                // Configure color scheme
-                colorScheme = TextMateColorScheme(context)
-
-                // Enable line numbers
                 isLineNumberEnabled = true
-
-                // Enable highlight current line
                 isHighlightCurrentLine = true
-
-                // Enable bracket auto completion
-                setBracketAutoCompletionEnabled(true)
-
-                // Enable auto indent
-                isAutoIndentEnabled = true
-
-                // Set tab width
-                tabWidth = 4
-
-                // Enable undo/redo
-                setUndoEnabled(true)
-
-                // Set text
+                setTabWidth(4)
                 setText(state.content)
-
                 state.editor = this
             }
         },
@@ -60,8 +33,7 @@ fun SoraEditorView(
             editor.release()
         },
         update = { editor ->
-            // Sync state changes
-            if (editor.text != state.content) {
+            if (editor.text.toString() != state.content) {
                 editor.setText(state.content)
             }
         }
@@ -82,5 +54,5 @@ class CodeEditorState {
 
 @Composable
 fun rememberCodeEditorState(): CodeEditorState {
-    return remember { CodeEditorState() }
+    return androidx.compose.runtime.remember { CodeEditorState() }
 }

@@ -1,4 +1,4 @@
-package com.artier.ide.lite.feature.ai-panel
+package com.artier.ide.lite.feature.aipanel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

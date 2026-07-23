@@ -59,7 +59,8 @@ fun FileExplorer(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(2.dp)
         ) {
-            items(fileTree) { node ->
+            items(fileTree.size) { index ->
+                val node = fileTree[index]
                 FileNodeItem(
                     node = node,
                     depth = 0,

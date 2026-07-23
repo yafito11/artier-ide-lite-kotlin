@@ -99,7 +99,7 @@ class AiViewModel @Inject constructor(
 
                 daemonBridge.sendChatMessage(
                     message = text,
-                    mode = _selectedMode.name.lowercase(),
+                    mode = selectedMode.name.lowercase(),
                     conversationHistory = conversationHistory.dropLast(1) // Exclude current message
                 ).collect { chunk ->
                     responseBuilder.append(chunk)

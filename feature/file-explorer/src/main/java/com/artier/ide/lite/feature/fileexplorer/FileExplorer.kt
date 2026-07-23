@@ -22,6 +22,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
@@ -36,7 +37,7 @@ fun FileExplorer(
     modifier: Modifier = Modifier,
     viewModel: FileExplorerViewModel = hiltViewModel()
 ) {
-    val fileTree: List<FileNode> by viewModel.fileTree
+    val fileTree = viewModel.fileTree.value
 
     Column(
         modifier = modifier

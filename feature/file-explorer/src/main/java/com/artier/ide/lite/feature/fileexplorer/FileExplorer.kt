@@ -12,7 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
@@ -30,16 +30,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.artier.ide.lite.core.model.FileNode
 import com.artier.ide.lite.ui.theme.ArtierColors
 
-/**
- * File explorer panel - Cursor IDE style
- */
 @Composable
 fun FileExplorer(
     onFileClick: (String, String, String) -> Unit,
     modifier: Modifier = Modifier,
     viewModel: FileExplorerViewModel = hiltViewModel()
 ) {
-    val fileTree by viewModel.fileTree
+    val fileTree: List<FileNode> by viewModel.fileTree
 
     Column(
         modifier = modifier
@@ -58,8 +55,7 @@ fun FileExplorer(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(2.dp)
         ) {
-            items(fileTree.size) { index ->
-                val node = fileTree[index]
+            itemsIndexed(fileTree) { _, node ->
                 FileNodeItem(
                     node = node,
                     depth = 0,
@@ -80,11 +76,30 @@ private fun FileNodeItem(
 ) {
     when (node) {
         is FileNode.Directory -> {
-            DirectoryItem(
-                node = node,
-                depth = depth,
-                onClick = { onDirectoryClick(node.path) }
-            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(28.dp)
+                    .background(ArtierColors.surface)
+                    .clickable { onDirectoryClick(node.path) }
+                    .padding(start = (depth * 16 + 8).dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                Icon(
+                    imageVector = if (node.isExpanded) Icons.Default.FolderOpen else Icons.Default.Folder,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp),
+                    tint = ArtierColors.primary
+                )
+                Text(
+                    text = node.name,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = ArtierColors.onBackground,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
             if (node.isExpanded) {
                 node.children.forEach { child ->
                     FileNodeItem(
@@ -97,77 +112,30 @@ private fun FileNodeItem(
             }
         }
         is FileNode.File -> {
-            FileItem(
-                node = node,
-                depth = depth,
-                onClick = { onFileClick(node.path, node.name, node.extension) }
-            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(28.dp)
+                    .background(ArtierColors.surface)
+                    .clickable { onFileClick(node.path, node.name, node.extension) }
+                    .padding(start = (depth * 16 + 8).dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.InsertDriveFile,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp),
+                    tint = ArtierColors.textMuted
+                )
+                Text(
+                    text = node.name,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = ArtierColors.onBackground,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
         }
-    }
-}
-
-@Composable
-private fun DirectoryItem(
-    node: FileNode.Directory,
-    depth: Int,
-    onClick: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(28.dp)
-            .background(ArtierColors.surface)
-            .clickable(onClick = onClick)
-            .padding(start = (depth * 16 + 8).dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(4.dp)
-    ) {
-        Icon(
-            imageVector = if (node.isExpanded) Icons.Default.FolderOpen else Icons.Default.Folder,
-            contentDescription = null,
-            modifier = Modifier.size(16.dp),
-            tint = ArtierColors.primary
-        )
-
-        Text(
-            text = node.name,
-            style = MaterialTheme.typography.bodySmall,
-            color = ArtierColors.onBackground,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
-    }
-}
-
-@Composable
-private fun FileItem(
-    node: FileNode.File,
-    depth: Int,
-    onClick: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(28.dp)
-            .background(ArtierColors.surface)
-            .clickable(onClick = onClick)
-            .padding(start = (depth * 16 + 8).dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(4.dp)
-    ) {
-        Icon(
-            imageVector = Icons.Default.InsertDriveFile,
-            contentDescription = null,
-            modifier = Modifier.size(16.dp),
-            tint = ArtierColors.textMuted
-        )
-
-        Text(
-            text = node.name,
-            style = MaterialTheme.typography.bodySmall,
-            color = ArtierColors.onBackground,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
     }
 }

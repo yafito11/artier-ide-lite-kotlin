@@ -3,6 +3,7 @@ package com.artier.ide.lite.ai.checkpoint
 import com.artier.ide.lite.core.database.dao.CheckpointDao
 import com.artier.ide.lite.core.database.entity.CheckpointEntity
 import com.artier.ide.lite.core.model.Checkpoint
+import kotlinx.coroutines.flow.first
 import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Singleton

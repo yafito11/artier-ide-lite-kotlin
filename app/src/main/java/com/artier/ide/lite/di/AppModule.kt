@@ -1,9 +1,7 @@
 package com.artier.ide.lite.di
 
 import android.content.Context
-import com.artier.ide.lite.daemon.DaemonBridge
 import com.artier.ide.lite.daemon.DaemonManager
-import com.artier.ide.lite.daemon.DaemonWebSocket
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,11 +26,5 @@ object AppModule {
     @Singleton
     fun provideDaemonManager(@ApplicationContext context: Context): DaemonManager {
         return DaemonManager(context)
-    }
-
-    @Provides
-    @Singleton
-    fun provideDaemonBridge(): DaemonBridge {
-        return DaemonWebSocket()
     }
 }

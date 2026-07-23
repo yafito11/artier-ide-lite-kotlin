@@ -119,7 +119,7 @@ fi
 #   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS environment variables
 #   * The command-line arguments
 # Use "xeli" mode for quoting to prevent word splitting.
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+DEFAULT_JVM_OPTS='-Xmx64m -Xms64m'
 
 # shellcheck disable=SC2086
 exec "$JAVACMD" \

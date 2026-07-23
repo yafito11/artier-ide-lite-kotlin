@@ -13,7 +13,7 @@ okhttp = "4.12.0"
 kotlinxSerialization = "1.7.3"
 kotlinxCoroutines = "1.9.0"
 coil = "2.7.0"
-soraEditor = "0.23.4"
+soraEditor = "0.23.6"
 termux = "0.119.0-beta.1"
 coreKtx = "1.13.1"
 activityCompose = "1.9.3"
@@ -64,15 +64,14 @@ kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
 # Editor
-sora-editor-bom = { group = "io.github.Rosemoe.sora-editor", name = "editor-bom", version.ref = "soraEditor" }
+sora-editor-bom = { group = "io.github.Rosemoe.sora-editor", name = "bom", version.ref = "soraEditor" }
 sora-editor = { group = "io.github.Rosemoe.sora-editor", name = "editor", version.ref = "soraEditor" }
 sora-editor-textmate = { group = "io.github.Rosemoe.sora-editor", name = "language-textmate", version.ref = "soraEditor" }
 sora-editor-treesitter = { group = "io.github.Rosemoe.sora-editor", name = "language-treesitter", version.ref = "soraEditor" }
 sora-editor-lsp = { group = "io.github.Rosemoe.sora-editor", name = "editor-lsp", version.ref = "soraEditor" }
-sora-oniguruma = { group = "io.github.Rosemoe.sora-editor", name = "oniguruma-native", version.ref = "soraEditor" }
 
-# Terminal
-terminal-view = { group = "com.github.termux", name = "terminal-view", version.ref = "termux" }
+# Terminal (placeholder - will be replaced with actual library)
+# terminal-view = { group = "com.github.termux", name = "terminal-view", version.ref = "termux" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

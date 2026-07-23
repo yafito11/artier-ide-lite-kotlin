@@ -37,7 +37,6 @@ dependencies {
     implementation(libs.sora.editor)
     implementation(libs.sora.editor.textmate)
     implementation(libs.sora.editor.treesitter)
-    implementation(libs.sora.oniguruma)
 
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)

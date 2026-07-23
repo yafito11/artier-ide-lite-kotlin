@@ -32,7 +32,8 @@ dependencies {
     implementation(project(":core:model"))
     implementation(project(":ui"))
 
-    implementation(libs.terminal.view)
+    // Termux terminal-view (placeholder - JitPack unavailable, needs manual JAR)
+    // implementation(libs.terminal.view)
 
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)

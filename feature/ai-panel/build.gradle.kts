@@ -1,12 +1,13 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
 }
 
 android {
-    namespace = "com.artier.ide.lite.feature.ai-panel"
+    namespace = "com.artier.ide.lite.feature.aipanel"
     compileSdk = 35
 
     defaultConfig {
@@ -20,6 +21,10 @@ android {
 
     kotlinOptions {
         jvmTarget = "17"
+    }
+
+    buildFeatures {
+        compose = true
     }
 }
 

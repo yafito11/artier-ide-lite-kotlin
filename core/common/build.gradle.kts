@@ -24,4 +24,7 @@ android {
 dependencies {
     implementation(libs.core.ktx)
     implementation(libs.kotlinx.coroutines.android)
+
+    // Unit Test
+    testImplementation("junit:junit:4.13.2")
 }

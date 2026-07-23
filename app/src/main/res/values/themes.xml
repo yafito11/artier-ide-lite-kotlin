@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base theme -->
-    <style name="Theme.ArtierIDELite" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Primary brand color -->
-        <item name="colorPrimary">#FF0078D4</item>
-        <item name="colorPrimaryVariant">#FF026EC1</item>
-        <item name="colorOnPrimary">#FFFFFFFF</item>
-
-        <!-- Secondary brand color -->
-        <item name="colorSecondary">#FF2EA043</item>
-        <item name="colorSecondaryVariant">#FF1A7F37</item>
-        <item name="colorOnSecondary">#FFFFFFFF</item>
-
-        <!-- Error -->
-        <item name="colorError">#FFF85149</item>
-        <item name="colorOnError">#FFFFFFFF</item>
-
-        <!-- Background & Surface -->
-        <item name="android:colorBackground">#FF1F1F1F</item>
-        <item name="colorSurface">#FF181818</item>
-        <item name="colorOnSurface">#FFCCCCCC</item>
-
+    <!-- Base theme - uses AppCompat since we use Compose for actual UI -->
+    <style name="Theme.ArtierIDELite" parent="Theme.AppCompat.NoActionBar">
         <!-- Status bar -->
         <item name="android:statusBarColor">#FF181818</item>
         <item name="android:navigationBarColor">#FF181818</item>

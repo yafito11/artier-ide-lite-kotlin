@@ -72,6 +72,7 @@ dependencies {
     implementation(libs.navigation.compose)
     implementation(libs.lifecycle.runtime.compose)
     implementation(libs.lifecycle.viewmodel.compose)
+    implementation("androidx.appcompat:appcompat:1.7.0")
 
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)

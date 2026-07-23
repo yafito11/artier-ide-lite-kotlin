@@ -16,11 +16,6 @@ import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.material.icons.filled.Extension
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.TooltipBox
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.PlainTooltip
-import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,7 +34,6 @@ import com.artier.ide.lite.ui.theme.ArtierColors
  * 🧩 Extensions
  * ⚙ Settings
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Sidebar(
     modifier: Modifier = Modifier,
@@ -85,7 +79,6 @@ fun Sidebar(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SidebarIcon(
     icon: ImageVector,
@@ -93,27 +86,15 @@ private fun SidebarIcon(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val tooltipState = rememberTooltipState()
-
-    TooltipBox(
-        positionProvider = TooltipState.rememberTooltipPositionProvider(),
-        tooltip = {
-            PlainTooltip {
-                androidx.compose.material3.Text(contentDescription)
-            }
-        },
-        state = tooltipState
-    ) {
-        Icon(
-            imageVector = icon,
-            contentDescription = contentDescription,
-            modifier = modifier
-                .size(40.dp)
-                .padding(8.dp)
-                .clip(RoundedCornerShape(4.dp))
-                .clickable(onClick = onClick)
-                .padding(4.dp),
-            tint = ArtierColors.onSurface
-        )
-    }
+    Icon(
+        imageVector = icon,
+        contentDescription = contentDescription,
+        modifier = modifier
+            .size(40.dp)
+            .padding(8.dp)
+            .clip(RoundedCornerShape(4.dp))
+            .clickable(onClick = onClick)
+            .padding(4.dp),
+        tint = ArtierColors.onSurface
+    )
 }

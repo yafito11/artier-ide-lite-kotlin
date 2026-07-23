@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Artier IDE Lite</string>
+    <string name="tagline">Agentic AI First — Lite</string>
+
+    <!-- Navigation -->
+    <string name="nav_workspace">Workspace</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Sidebar -->
+    <string name="sidebar_explorer">File Explorer</string>
+    <string name="sidebar_ai_assistant">AI Assistant</string>
+    <string name="sidebar_extensions">Extensions</string>
+    <string name="sidebar_settings">Settings</string>
+
+    <!-- AI Panel -->
+    <string name="ai_panel_title">AI Assistant</string>
+    <string name="ai_panel_source">Sumber</string>
+    <string name="ai_panel_mode">Mode</string>
+    <string name="ai_panel_input_hint">Ask anything…</string>
+    <string name="ai_panel_send">Send</string>
+    <string name="ai_panel_clear">Clear conversation</string>
+    <string name="ai_panel_thinking">Thinking…</string>
+    <string name="ai_panel_empty">Ask anything about your code…</string>
+
+    <!-- AI Modes -->
+    <string name="ai_mode_agent">Agent</string>
+    <string name="ai_mode_gather">Gather</string>
+    <string name="ai_mode_chat">Chat</string>
+
+    <!-- AI Sources -->
+    <string name="ai_source_builtin">Built-in Agent</string>
+    <string name="ai_source_opencode">OpenCode</string>
+    <string name="ai_source_claude">Claude Code</string>
+
+    <!-- Status Bar -->
+    <string name="status_agent_mode">Agent Mode</string>
+    <string name="status_gather_mode">Gather Mode</string>
+    <string name="status_chat_mode">Chat Mode</string>
+    <string name="status_main_branch">main</string>
+    <string name="status_encoding">UTF-8</string>
+    <string name="status_line_format">Ln %d, Col %d</string>
+
+    <!-- File Explorer -->
+    <string name="explorer_title">EXPLORER</string>
+    <string name="explorer_no_files">No files open</string>
+
+    <!-- Editor -->
+    <string name="editor_placeholder">Editor Area\nSora Editor will be integrated here</string>
+    <string name="editor_tab_close">Close tab</string>
+
+    <!-- Terminal -->
+    <string name="terminal_title">TERMINAL</string>
+    <string name="terminal_tab">TAB</string>
+    <string name="terminal_esc">ESC</string>
+    <string name="terminal_ctrl">CTRL</string>
+    <string name="terminal_alt">ALT</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_daemon_port">Daemon Port</string>
+    <string name="settings_auto_start_daemon">Auto-start Daemon</string>
+    <string name="settings_tab_size">Tab Size</string>
+    <string name="settings_font_size">Font Size</string>
+    <string name="settings_autocomplete_enabled">Autocomplete Enabled</string>
+    <string name="settings_default_ai_mode">Default AI Mode</string>
+
+    <!-- Errors -->
+    <string name="error_daemon_connection">Failed to connect to daemon</string>
+    <string name="error_network">Network error</string>
+    <string name="error_unknown">Unknown error</string>
+
+    <!-- Permissions -->
+    <string name="permission_storage">Storage permission is required to open files</string>
+</resources>

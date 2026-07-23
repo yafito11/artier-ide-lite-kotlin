@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#FF0078D4"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+
+    <!-- AI icon (brain/circuit symbol) -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M44,40 L44,68 L48,68 L48,40 Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M52,36 L52,72 L56,72 L56,36 Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M60,44 L60,64 L64,64 L64,44 Z"/>
+
+    <!-- Left bracket -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M38,42 L42,42 L42,40 L36,40 L36,68 L42,68 L42,66 L38,66 Z"/>
+
+    <!-- Right bracket -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M66,42 L70,42 L70,66 L66,66 L66,68 L72,68 L72,40 L66,40 Z"/>
+</vector>

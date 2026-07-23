@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#FF181818"
+        android:pathData="M0,0h48v48H0z"/>
+
+    <!-- Logo mark - AI bracket symbol -->
+    <path
+        android:fillColor="#FF0078D4"
+        android:pathData="M12,12 L18,12 L18,10 L10,10 L10,38 L18,38 L18,36 L12,36 Z"/>
+    <path
+        android:fillColor="#FF0078D4"
+        android:pathData="M30,12 L36,12 L36,36 L30,36 L30,38 L38,38 L38,10 L30,10 Z"/>
+
+    <!-- Center bars -->
+    <path
+        android:fillColor="#FF0078D4"
+        android:pathData="M20,16 L22,16 L22,32 L20,32 Z"/>
+    <path
+        android:fillColor="#FF0078D4"
+        android:pathData="M24,12 L26,12 L26,36 L24,36 Z"/>
+    <path
+        android:fillColor="#FF0078D4"
+        android:pathData="M28,18 L30,18 L30,30 L28,30 Z"/>
+</vector>

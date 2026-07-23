@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="artier_background">#FF1F1F1F</color>
+    <color name="artier_surface">#FF181818</color>
+    <color name="artier_surface_variant">#FF2B2B2B</color>
+    <color name="artier_surface_container">#FF202020</color>
+    <color name="artier_surface_bright">#FF313131</color>
+    <color name="artier_surface_highest">#FF3C3C3C</color>
+
+    <!-- Text -->
+    <color name="artier_on_background">#FFCCCCCC</color>
+    <color name="artier_on_surface">#FFD7D7D7</color>
+    <color name="artier_text_muted">#FF9D9D9D</color>
+    <color name="artier_text_disabled">#FF6E7681</color>
+
+    <!-- Primary -->
+    <color name="artier_primary">#FF0078D4</color>
+    <color name="artier_primary_variant">#FF026EC1</color>
+    <color name="artier_on_primary">#FFFFFFFF</color>
+
+    <!-- Secondary -->
+    <color name="artier_secondary">#FF2EA043</color>
+    <color name="artier_on_secondary">#FFFFFFFF</color>
+
+    <!-- Error -->
+    <color name="artier_error">#FFF85149</color>
+    <color name="artier_on_error">#FFFFFFFF</color>
+
+    <!-- Syntax highlighting -->
+    <color name="artier_keyword">#FF569CD6</color>
+    <color name="artier_string">#FFCE9178</color>
+    <color name="artier_comment">#FF6A9955</color>
+    <color name="artier_function">#FFDCDCAA</color>
+    <color name="artier_type">#FF4EC9B0</color>
+    <color name="artier_variable">#FF9CDCFE</color>
+    <color name="artier_number">#FFB5CEA8</color>
+</resources>
